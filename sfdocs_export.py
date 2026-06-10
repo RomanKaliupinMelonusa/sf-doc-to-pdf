@@ -129,6 +129,18 @@ EXTRACT_MAIN_JS = """
   );
   if (!main) return { __error: 'main content not found' };
 
+  // --- Normalize headings ---
+  // <doc-heading header="Basket Middleware" aria-level="2"> uses shadow DOM.
+  // Replace with a plain <hN> so innerHTML captures it.
+  main.querySelectorAll('doc-heading').forEach(el => {
+    const text = el.getAttribute('header') || '';
+    const level = parseInt(el.getAttribute('aria-level') || '2', 10);
+    const tag = 'h' + Math.min(Math.max(level, 1), 6);
+    const heading = document.createElement(tag);
+    heading.textContent = text;
+    el.replaceWith(heading);
+  });
+
   // --- Normalize callouts ---
   // <doc-content-callout header="Note" variant="note"> → <blockquote>
   main.querySelectorAll('doc-content-callout').forEach(el => {
