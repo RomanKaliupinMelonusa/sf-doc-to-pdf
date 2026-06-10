@@ -121,13 +121,34 @@ async () => {
 }
 """
 
-# Extract the main article HTML (not the whole page) for Markdown conversion.
+# Normalize code blocks and extract main article HTML for Markdown conversion.
 EXTRACT_MAIN_JS = """
 () => {
   const main = document.querySelector(
     'main article, main [class*="content"], main, [role="main"], article'
   );
   if (!main) return { __error: 'main content not found' };
+
+  // --- Normalize code blocks ---
+  // Replace <dx-code-block> (and its wrapper) with a clean <pre><code>.
+  // The actual source lives in the "code-block" attribute; "language" has the lang.
+  main.querySelectorAll('dx-code-block').forEach(el => {
+    const code = el.getAttribute('code-block') || '';
+    const lang = el.getAttribute('language') || '';
+    const pre = document.createElement('pre');
+    const codeEl = document.createElement('code');
+    if (lang) codeEl.className = 'language-' + lang;
+    codeEl.textContent = code;
+    pre.appendChild(codeEl);
+    // The dx-code-block is usually inside a div.custom-code-block wrapper
+    const wrapper = el.closest('.custom-code-block') || el.parentElement;
+    if (wrapper && wrapper !== main) {
+      wrapper.replaceWith(pre);
+    } else {
+      el.replaceWith(pre);
+    }
+  });
+
   const h1 = document.querySelector('h1');
   return {
     title: h1 ? h1.textContent.trim() : document.title,
@@ -338,11 +359,26 @@ def main():
                     data = page.evaluate(EXTRACT_MAIN_JS)
                     if isinstance(data, dict) and "__error" in data:
                         raise RuntimeError(data["__error"])
+
+                    def _code_lang(el):
+                        if not el:
+                            return ""
+                        code = el.find("code") if el.name == "pre" else el
+                        if not code:
+                            return ""
+                        cls = code.get("class")
+                        if not cls:
+                            return ""
+                        if isinstance(cls, list):
+                            cls = " ".join(cls)
+                        for c in cls.split():
+                            if "language-" in c:
+                                return c.replace("language-", "")
+                        return ""
+
                     md_body = html_to_md(
                         data["html"], heading_style="ATX",
-                        code_language_callback=lambda el:
-                            (el.get("class") or [""])[0]
-                            .replace("language-", "") if el else "",
+                        code_language_callback=_code_lang,
                     )
                     md_body = re.sub(r"\n{3,}", "\n\n", md_body).strip()
                     crumb = " > ".join(d.split("_", 1)[-1].replace("_", " ")
