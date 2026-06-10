@@ -63,44 +63,60 @@ async (docId) => {
     credentials: 'include',
   });
   if (!r.ok) return { __error: r.status };
-  return await r.json();
+  const text = await r.text();
+  if (!text || !text.trim()) return { __error: 'empty response body' };
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    return { __error: `invalid JSON: ${e.message}` };
+  }
 }
 """
 
-# Expand every collapsible item in the left nav, then serialize the UL/LI tree.
+# Scrape sidebar by traversing DX-TREE-ITEM shadow DOM components.
 SCRAPE_SIDEBAR_JS = """
 async () => {
-  const sleep = (ms) => new Promise(r => setTimeout(r, ms));
-  // Find the nav containing doc links
-  const navs = [...document.querySelectorAll('nav, aside, [class*="sidebar"], [class*="Sidebar"]')];
-  const nav = navs.find(n => n.querySelectorAll('a[href*="/docs/"]').length > 3);
-  if (!nav) return { __error: 'sidebar nav not found' };
-
-  // Keep clicking unexpanded toggles until none remain (lazy-rendered trees)
-  for (let pass = 0; pass < 30; pass++) {
-    const toggles = [...nav.querySelectorAll(
-      '[aria-expanded="false"], button[class*="expand"], button[class*="toggle"], [class*="chevron"]'
-    )].filter(el => el.offsetParent !== null);
-    if (!toggles.length) break;
-    toggles.forEach(t => t.click());
-    await sleep(250);
+  function extractTree(root, depth) {
+    if (depth > 15) return [];
+    const items = [];
+    const allEls = root.querySelectorAll ? [...root.querySelectorAll('*')] : [];
+    for (const el of allEls) {
+      if (el.tagName === 'DX-TREE-ITEM' && el.shadowRoot) {
+        const sr = el.shadowRoot;
+        let text = '', href = '';
+        const link = sr.querySelector('a[href]');
+        if (link) {
+          href = link.getAttribute('href');
+          const tile = sr.querySelector('dx-tree-tile');
+          if (tile && tile.shadowRoot) {
+            text = tile.shadowRoot.textContent.trim();
+          }
+          if (!text) text = link.textContent.trim();
+        }
+        const children = extractTree(sr, depth + 1);
+        if (text || href || children.length > 0) {
+          items.push({text: text.split('\\n')[0].trim(), href, children});
+        }
+      }
+    }
+    return items;
   }
-
-  const serialize = (ul) => [...ul.children]
-    .filter(li => li.tagName === 'LI')
-    .map(li => {
-      const a = li.querySelector(':scope a[href], :scope > * a[href]');
-      const childUl = li.querySelector(':scope ul, :scope > * ul');
-      return {
-        text: (a ? a.textContent : li.textContent || '').trim().split('\\n')[0],
-        href: a ? a.getAttribute('href') : null,
-        children: childUl ? serialize(childUl) : [],
-      };
-    });
-
-  const topUl = nav.querySelector('ul');
-  if (!topUl) return { __error: 'no list inside nav' };
-  return { toc: serialize(topUl) };
+  function findTreeRoot(root, depth) {
+    if (depth > 10) return null;
+    const allEls = root.querySelectorAll ? [...root.querySelectorAll('*')] : [];
+    for (const el of allEls) {
+      if (el.shadowRoot) {
+        const treeItems = el.shadowRoot.querySelectorAll('dx-tree-item');
+        if (treeItems.length > 3) return el.shadowRoot;
+        const found = findTreeRoot(el.shadowRoot, depth + 1);
+        if (found) return found;
+      }
+    }
+    return null;
+  }
+  const treeRoot = findTreeRoot(document, 0);
+  if (!treeRoot) return { __error: 'sidebar nav not found (no DX-TREE-ITEM tree)' };
+  return { toc: extractTree(treeRoot, 0) };
 }
 """
 
@@ -197,7 +213,7 @@ def main():
     args = ap.parse_args()
 
     category, _, deliverable = args.doc.partition(".")
-    start_url = args.start_url or f"{BASE}/docs/{category}/{deliverable}"
+    start_url = args.start_url or f"{BASE}/docs/{category}/{deliverable}/guide/getting-started"
 
     from playwright.sync_api import sync_playwright
 
@@ -213,8 +229,8 @@ def main():
         page.set_default_timeout(NAV_TIMEOUT_MS)
 
         print(f"Bootstrapping session at {start_url} ...")
-        page.goto(start_url, wait_until="domcontentloaded")
-        page.wait_for_timeout(2500)  # let Akamai + SPA settle
+        page.goto(start_url, wait_until="networkidle")
+        page.wait_for_timeout(5000)  # let Akamai + SPA settle
 
         print("Fetching TOC via in-page API call ...")
         toc_json = page.evaluate(FETCH_TOC_JS, args.doc)
