@@ -121,13 +121,26 @@ async () => {
 }
 """
 
-# Normalize code blocks and extract main article HTML for Markdown conversion.
+# Normalize code blocks, callouts, and extract main article HTML for Markdown conversion.
 EXTRACT_MAIN_JS = """
 () => {
   const main = document.querySelector(
     'main article, main [class*="content"], main, [role="main"], article'
   );
   if (!main) return { __error: 'main content not found' };
+
+  // --- Normalize callouts ---
+  // <doc-content-callout header="Note" variant="note"> → <blockquote>
+  main.querySelectorAll('doc-content-callout').forEach(el => {
+    const header = el.getAttribute('header') || 'Note';
+    const bq = document.createElement('blockquote');
+    const label = document.createElement('p');
+    label.innerHTML = '<strong>' + header + ':</strong>';
+    bq.appendChild(label);
+    // Move child nodes into the blockquote
+    while (el.firstChild) bq.appendChild(el.firstChild);
+    el.replaceWith(bq);
+  });
 
   // --- Normalize code blocks ---
   // Replace <dx-code-block> (and its wrapper) with a clean <pre><code>.
@@ -142,7 +155,8 @@ EXTRACT_MAIN_JS = """
     pre.appendChild(codeEl);
     // The dx-code-block is usually inside a div.custom-code-block wrapper
     const wrapper = el.closest('.custom-code-block') || el.parentElement;
-    if (wrapper && wrapper !== main) {
+    // Guard: don't replace wrapper if it also contains prose (headings, paragraphs, etc.)
+    if (wrapper && wrapper !== main && !wrapper.querySelector('h1,h2,h3,h4,h5,h6,p,table,ul,ol,blockquote')) {
       wrapper.replaceWith(pre);
     } else {
       el.replaceWith(pre);
