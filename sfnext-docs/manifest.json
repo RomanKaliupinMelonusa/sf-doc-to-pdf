@@ -1,0 +1,1168 @@
+{
+  "doc": "commerce.pwa-kit-managed-runtime",
+  "pages": [
+    {
+      "index": 1,
+      "title": "Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-get-started.html",
+      "dir_parts": [],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-get-started.html",
+      "pdf": "001_Storefront_Next.pdf"
+    },
+    {
+      "index": 2,
+      "title": "Get Started",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-get-started-section.html",
+      "dir_parts": [
+        "001_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-get-started-section.html",
+      "pdf": "001_Storefront_Next/002_Get_Started.pdf"
+    },
+    {
+      "index": 3,
+      "title": "Architecture and Core Concepts",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-architecture.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-architecture.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts.pdf"
+    },
+    {
+      "index": 4,
+      "title": "Project Configuration and Build Tools",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-project-config-build-tools.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-project-config-build-tools.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/004_Project_Configuration_and_Build_Tools.pdf"
+    },
+    {
+      "index": 5,
+      "title": "Project Structure",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-project-structure.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts",
+        "004_Project_Configuration_and_Build_Tools"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-project-structure.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/004_Project_Configuration_and_Build_Tools/005_Project_Structure.pdf"
+    },
+    {
+      "index": 6,
+      "title": "Project Configuration",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-project-config.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts",
+        "004_Project_Configuration_and_Build_Tools"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-project-config.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/004_Project_Configuration_and_Build_Tools/006_Project_Configuration.pdf"
+    },
+    {
+      "index": 7,
+      "title": "Build Tools",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-build-tools.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts",
+        "004_Project_Configuration_and_Build_Tools"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-build-tools.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/004_Project_Configuration_and_Build_Tools/007_Build_Tools.pdf"
+    },
+    {
+      "index": 8,
+      "title": "Data Fetching",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-data-loading.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-data-loading.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/008_Data_Fetching.pdf"
+    },
+    {
+      "index": 9,
+      "title": "Loading States",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-suspense.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-suspense.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/009_Loading_States.pdf"
+    },
+    {
+      "index": 10,
+      "title": "State Management",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-state-management.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-state-management.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/010_State_Management.pdf"
+    },
+    {
+      "index": 11,
+      "title": "Basket Management",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-basket-management.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-basket-management.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/011_Basket_Management.pdf"
+    },
+    {
+      "index": 12,
+      "title": "SCAPI Client",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-api-integration.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-api-integration.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/012_SCAPI_Client.pdf"
+    },
+    {
+      "index": 13,
+      "title": "Content Caching",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-caching-content.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-caching-content.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/013_Content_Caching.pdf"
+    },
+    {
+      "index": 14,
+      "title": "Storage and Sessions",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storage-sessions.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storage-sessions.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/014_Storage_and_Sessions.pdf"
+    },
+    {
+      "index": 15,
+      "title": "Shopper Context",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-shopper-context.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-shopper-context.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/015_Shopper_Context.pdf"
+    },
+    {
+      "index": 16,
+      "title": "Server API Routes",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-server-routes.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-server-routes.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/016_Server_API_Routes.pdf"
+    },
+    {
+      "index": 17,
+      "title": "UI Styling",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-ui-styling.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-ui-styling.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/017_UI_Styling.pdf"
+    },
+    {
+      "index": 18,
+      "title": "Images",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-images.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-images.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/018_Images.pdf"
+    },
+    {
+      "index": 19,
+      "title": "Static Assets",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-static-assets.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-static-assets.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/019_Static_Assets.pdf"
+    },
+    {
+      "index": 20,
+      "title": "SEO and Metadata",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-seo-metadata.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-seo-metadata.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/020_SEO_and_Metadata.pdf"
+    },
+    {
+      "index": 21,
+      "title": "AEO and GEO",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-aeo-geo.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-aeo-geo.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/021_AEO_and_GEO.pdf"
+    },
+    {
+      "index": 22,
+      "title": "Multisite Configuration",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-multi-site.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-multi-site.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/022_Multisite_Configuration.pdf"
+    },
+    {
+      "index": 23,
+      "title": "Internationalization",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-intl.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-intl.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/023_Internationalization.pdf"
+    },
+    {
+      "index": 24,
+      "title": "Adapters",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-adapters.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-adapters.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/024_Adapters.pdf"
+    },
+    {
+      "index": 25,
+      "title": "Security Response Headers",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-security-headers.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "003_Architecture_and_Core_Concepts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-security-headers.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/003_Architecture_and_Core_Concepts/025_Security_Response_Headers.pdf"
+    },
+    {
+      "index": 26,
+      "title": "Browser Compatibility",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-browser-comp.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-browser-comp.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/026_Browser_Compatibility.pdf"
+    },
+    {
+      "index": 27,
+      "title": "Quick Start: Create Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-quick-start-choice.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-quick-start-choice.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/027_Quick_Start_Create_Storefront_Next.pdf"
+    },
+    {
+      "index": 28,
+      "title": "Create Storefront Next in Business Manager with a GitHub Repository",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-quick-start-create-bm-github.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "027_Quick_Start_Create_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-quick-start-create-bm-github.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/027_Quick_Start_Create_Storefront_Next/028_Create_Storefront_Next_in_Business_Manager_with_a_GitHub_Repository.pdf"
+    },
+    {
+      "index": 29,
+      "title": "Create Storefront Next in Business Manager with Local Code",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-quick-start-create-bm.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "027_Quick_Start_Create_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-quick-start-create-bm.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/027_Quick_Start_Create_Storefront_Next/029_Create_Storefront_Next_in_Business_Manager_with_Local_Code.pdf"
+    },
+    {
+      "index": 30,
+      "title": "Explore Storefront Next Code Locally",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-quick-start-create-sf.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started",
+        "027_Quick_Start_Create_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-quick-start-create-sf.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/027_Quick_Start_Create_Storefront_Next/030_Explore_Storefront_Next_Code_Locally.pdf"
+    },
+    {
+      "index": 31,
+      "title": "Create an Environment in Business Manager",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-create-environment.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-create-environment.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/031_Create_an_Environment_in_Business_Manager.pdf"
+    },
+    {
+      "index": 32,
+      "title": "Connect an Existing Storefront to B2C Commerce",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-connect-storefront.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "002_Get_Started"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-connect-storefront.html",
+      "pdf": "001_Storefront_Next/002_Get_Started/032_Connect_an_Existing_Storefront_to_B2C_Commerce.pdf"
+    },
+    {
+      "index": 33,
+      "title": "Build and Customize Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-customize-sf.html",
+      "dir_parts": [
+        "001_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-customize-sf.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next.pdf"
+    },
+    {
+      "index": 34,
+      "title": "Agent Skills and the B2C DX MCP Server",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mcp-server.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mcp-server.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/034_Agent_Skills_and_the_B2C_DX_MCP_Server.pdf"
+    },
+    {
+      "index": 35,
+      "title": "Managed Runtime (MRT) Data Store",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-data-store.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-data-store.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/035_Managed_Runtime_MRT_Data_Store.pdf"
+    },
+    {
+      "index": 36,
+      "title": "Customize Your Storefront",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-customize.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-customize.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/036_Customize_Your_Storefront.pdf"
+    },
+    {
+      "index": 37,
+      "title": "Deploy Storefront Next to Managed Runtime (MRT)",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-push-mrt-auto.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-push-mrt-auto.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/037_Deploy_Storefront_Next_to_Managed_Runtime_MRT.pdf"
+    },
+    {
+      "index": 38,
+      "title": "Modernized Storefront Experience in Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-modern-exp.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-modern-exp.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/038_Modernized_Storefront_Experience_in_Storefront_Next.pdf"
+    },
+    {
+      "index": 39,
+      "title": "Prototyped UI Components",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-prototyped-cmp.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next",
+        "038_Modernized_Storefront_Experience_in_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-prototyped-cmp.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/038_Modernized_Storefront_Experience_in_Storefront_Next/039_Prototyped_UI_Components.pdf"
+    },
+    {
+      "index": 40,
+      "title": "Enhance Shopper Experience with Store Locator and In-Store Pickup",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-instore-pickup.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-instore-pickup.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/040_Enhance_Shopper_Experience_with_Store_Locator_and_In-Store_Pickup.pdf"
+    },
+    {
+      "index": 41,
+      "title": "Shopper Agent for Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-shopping-agent.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-shopping-agent.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/041_Shopper_Agent_for_Storefront_Next.pdf"
+    },
+    {
+      "index": 42,
+      "title": "Page Designer Integration with Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-page-designer.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-page-designer.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/042_Page_Designer_Integration_with_Storefront_Next.pdf"
+    },
+    {
+      "index": 43,
+      "title": "Page Designer Content Management for Merchants",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-page-designer-customize-sf.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next",
+        "042_Page_Designer_Integration_with_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-page-designer-customize-sf.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/042_Page_Designer_Integration_with_Storefront_Next/043_Page_Designer_Content_Management_for_Merchants.pdf"
+    },
+    {
+      "index": 44,
+      "title": "Migrate Content Slots from SFRA to Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-page-designer-content-slots.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next",
+        "042_Page_Designer_Integration_with_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-page-designer-content-slots.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/042_Page_Designer_Integration_with_Storefront_Next/044_Migrate_Content_Slots_from_SFRA_to_Storefront_Next.pdf"
+    },
+    {
+      "index": 45,
+      "title": "Configure Address Autocomplete for Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-address-autocomplete.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-address-autocomplete.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/045_Configure_Address_Autocomplete_for_Storefront_Next.pdf"
+    },
+    {
+      "index": 46,
+      "title": "Configure Checkout for Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-one-click-checkout.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-one-click-checkout.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/046_Configure_Checkout_for_Storefront_Next.pdf"
+    },
+    {
+      "index": 47,
+      "title": "Passwordless Login for Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-passwordless-login.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-passwordless-login.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/047_Passwordless_Login_for_Storefront_Next.pdf"
+    },
+    {
+      "index": 48,
+      "title": "Email Verification for Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-email-verification.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-email-verification.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/048_Email_Verification_for_Storefront_Next.pdf"
+    },
+    {
+      "index": 49,
+      "title": "Social Login for Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-social-login.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-social-login.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/049_Social_Login_for_Storefront_Next.pdf"
+    },
+    {
+      "index": 50,
+      "title": "Password Reset for Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-password-reset.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-password-reset.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/050_Password_Reset_for_Storefront_Next.pdf"
+    },
+    {
+      "index": 51,
+      "title": "Limit Access to a Storefront Under Development",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-protect-storefront.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-protect-storefront.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/051_Limit_Access_to_a_Storefront_Under_Development.pdf"
+    },
+    {
+      "index": 52,
+      "title": "Extend Storefront Next with Features",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-extend.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-extend.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/052_Extend_Storefront_Next_with_Features.pdf"
+    },
+    {
+      "index": 53,
+      "title": "Upgrade Customized Components",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-component-extend-upgrade.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-component-extend-upgrade.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/053_Upgrade_Customized_Components.pdf"
+    },
+    {
+      "index": 54,
+      "title": "Environment Base Paths",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-base-path.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-base-path.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/054_Environment_Base_Paths.pdf"
+    },
+    {
+      "index": 55,
+      "title": "Hybrid Storefronts",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-hybrid.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-hybrid.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/055_Hybrid_Storefronts.pdf"
+    },
+    {
+      "index": 56,
+      "title": "Set Up Hybrid on On-Demand Sandbox (ODS) Instances",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-hybrid-ods.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next",
+        "055_Hybrid_Storefronts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-hybrid-ods.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/055_Hybrid_Storefronts/056_Set_Up_Hybrid_on_On-Demand_Sandbox_ODS_Instances.pdf"
+    },
+    {
+      "index": 57,
+      "title": "Set Up Hybrid Proxy Locally",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-hybrid-proxy-local-dev.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next",
+        "055_Hybrid_Storefronts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-hybrid-proxy-local-dev.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/055_Hybrid_Storefronts/057_Set_Up_Hybrid_Proxy_Locally.pdf"
+    },
+    {
+      "index": 58,
+      "title": "Choose a Hybrid Routing Matrix",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-hybrid-routing-matrix.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next",
+        "055_Hybrid_Storefronts"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-hybrid-routing-matrix.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/055_Hybrid_Storefronts/058_Choose_a_Hybrid_Routing_Matrix.pdf"
+    },
+    {
+      "index": 59,
+      "title": "Login and Registration Support",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-login-support.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-login-support.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/059_Login_and_Registration_Support.pdf"
+    },
+    {
+      "index": 60,
+      "title": "Login and Registration Support for Hybrid Storefront Next Storefronts",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-login-support-hybrid.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "033_Build_and_Customize_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-login-support-hybrid.html",
+      "pdf": "001_Storefront_Next/033_Build_and_Customize_Storefront_Next/060_Login_and_Registration_Support_for_Hybrid_Storefront_Next_Storefronts.pdf"
+    },
+    {
+      "index": 61,
+      "title": "Deploy and Manage Storefront Next on Managed Runtime",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-section.html",
+      "dir_parts": [
+        "001_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-section.html",
+      "pdf": "001_Storefront_Next/061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime.pdf"
+    },
+    {
+      "index": 62,
+      "title": "Managed Runtime Overview",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-overview.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-overview.html",
+      "pdf": "001_Storefront_Next/061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime/062_Managed_Runtime_Overview.pdf"
+    },
+    {
+      "index": 63,
+      "title": "Managed Runtime Administration",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-administration.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-administration.html",
+      "pdf": "001_Storefront_Next/061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime/063_Managed_Runtime_Administration.pdf"
+    },
+    {
+      "index": 64,
+      "title": "Automate Environment Administration with the API",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-api.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-api.html",
+      "pdf": "001_Storefront_Next/061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime/064_Automate_Environment_Administration_with_the_API.pdf"
+    },
+    {
+      "index": 65,
+      "title": "Environment Variables",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-environment-vars.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-environment-vars.html",
+      "pdf": "001_Storefront_Next/061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime/065_Environment_Variables.pdf"
+    },
+    {
+      "index": 66,
+      "title": "Automate Environment Variable Management with the CLI or API",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-env-vars-api.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-env-vars-api.html",
+      "pdf": "001_Storefront_Next/061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime/066_Automate_Environment_Variable_Management_with_the_CLI_or_API.pdf"
+    },
+    {
+      "index": 67,
+      "title": "Troubleshoot Environment Variables",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-env-var-troubleshoot.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-env-var-troubleshoot.html",
+      "pdf": "001_Storefront_Next/061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime/067_Troubleshoot_Environment_Variables.pdf"
+    },
+    {
+      "index": 68,
+      "title": "Launch Your Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-launch-storefront.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-launch-storefront.html",
+      "pdf": "001_Storefront_Next/061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime/068_Launch_Your_Storefront_Next.pdf"
+    },
+    {
+      "index": 69,
+      "title": "Configure Routing Rules in Business Manager",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-routing-bm.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-mrt-routing-bm.html",
+      "pdf": "001_Storefront_Next/061_Deploy_and_Manage_Storefront_Next_on_Managed_Runtime/069_Configure_Routing_Rules_in_Business_Manager.pdf"
+    },
+    {
+      "index": 70,
+      "title": "Preview, Test, and Debug Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-test-debug-section.html",
+      "dir_parts": [
+        "001_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-test-debug-section.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next.pdf"
+    },
+    {
+      "index": 71,
+      "title": "Preview Your Storefront",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storefront-preview.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "070_Preview_Test_and_Debug_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storefront-preview.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next/071_Preview_Your_Storefront.pdf"
+    },
+    {
+      "index": 72,
+      "title": "Storybook",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storybook.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "070_Preview_Test_and_Debug_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storybook.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next/072_Storybook.pdf"
+    },
+    {
+      "index": 73,
+      "title": "Create a Story",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storybook-create-story.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "070_Preview_Test_and_Debug_Storefront_Next",
+        "072_Storybook"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storybook-create-story.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next/072_Storybook/073_Create_a_Story.pdf"
+    },
+    {
+      "index": 74,
+      "title": "Storybook File and Folder Structure",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storybook-structure.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "070_Preview_Test_and_Debug_Storefront_Next",
+        "072_Storybook"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storybook-structure.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next/072_Storybook/074_Storybook_File_and_Folder_Structure.pdf"
+    },
+    {
+      "index": 75,
+      "title": "Test Components in Storybook",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storybook-test.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "070_Preview_Test_and_Debug_Storefront_Next",
+        "072_Storybook"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-storybook-test.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next/072_Storybook/075_Test_Components_in_Storybook.pdf"
+    },
+    {
+      "index": 76,
+      "title": "End-to-End Testing with CodeceptJS",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-e2e-testing.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "070_Preview_Test_and_Debug_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-e2e-testing.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next/076_End-to-End_Testing_with_CodeceptJS.pdf"
+    },
+    {
+      "index": 77,
+      "title": "Debug Your Storefront Next App",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-debug.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "070_Preview_Test_and_Debug_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-debug.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next/077_Debug_Your_Storefront_Next_App.pdf"
+    },
+    {
+      "index": 78,
+      "title": "General Troubleshooting Tips",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-debug-troubleshoot.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "070_Preview_Test_and_Debug_Storefront_Next",
+        "077_Debug_Your_Storefront_Next_App"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-debug-troubleshoot.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next/077_Debug_Your_Storefront_Next_App/078_General_Troubleshooting_Tips.pdf"
+    },
+    {
+      "index": 79,
+      "title": "Debug Your Storefront Next App Locally",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-debug-locally.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "070_Preview_Test_and_Debug_Storefront_Next",
+        "077_Debug_Your_Storefront_Next_App"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-debug-locally.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next/077_Debug_Your_Storefront_Next_App/079_Debug_Your_Storefront_Next_App_Locally.pdf"
+    },
+    {
+      "index": 80,
+      "title": "Logging in Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-logging.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "070_Preview_Test_and_Debug_Storefront_Next",
+        "077_Debug_Your_Storefront_Next_App"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-logging.html",
+      "pdf": "001_Storefront_Next/070_Preview_Test_and_Debug_Storefront_Next/077_Debug_Your_Storefront_Next_App/080_Logging_in_Storefront_Next.pdf"
+    },
+    {
+      "index": 81,
+      "title": "Optimize the Performance of Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-perf-section.html",
+      "dir_parts": [
+        "001_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-perf-section.html",
+      "pdf": "001_Storefront_Next/081_Optimize_the_Performance_of_Storefront_Next.pdf"
+    },
+    {
+      "index": 82,
+      "title": "Performance Best Practices",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-performance.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "081_Optimize_the_Performance_of_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-performance.html",
+      "pdf": "001_Storefront_Next/081_Optimize_the_Performance_of_Storefront_Next/082_Performance_Best_Practices.pdf"
+    },
+    {
+      "index": 83,
+      "title": "Monitor the Performance of Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-perf-tools.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "081_Optimize_the_Performance_of_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-perf-tools.html",
+      "pdf": "001_Storefront_Next/081_Optimize_the_Performance_of_Storefront_Next/083_Monitor_the_Performance_of_Storefront_Next.pdf"
+    },
+    {
+      "index": 84,
+      "title": "Track Storefront Next Activity with Analytics",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-analytics.html",
+      "dir_parts": [
+        "001_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-analytics.html",
+      "pdf": "001_Storefront_Next/084_Track_Storefront_Next_Activity_with_Analytics.pdf"
+    },
+    {
+      "index": 85,
+      "title": "Migrate from PWA Kit to Storefront Next",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-overview.html",
+      "dir_parts": [
+        "001_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-overview.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next.pdf"
+    },
+    {
+      "index": 86,
+      "title": "Project Structure",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-project-structure.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-project-structure.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/086_Project_Structure.pdf"
+    },
+    {
+      "index": 87,
+      "title": "Project Configuration",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-project-config.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-project-config.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/087_Project_Configuration.pdf"
+    },
+    {
+      "index": 88,
+      "title": "Build System",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-build-tools.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-build-tools.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/088_Build_System.pdf"
+    },
+    {
+      "index": 89,
+      "title": "Development Workflow",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-dev-workflow.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-dev-workflow.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/089_Development_Workflow.pdf"
+    },
+    {
+      "index": 90,
+      "title": "Deployment",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-deployment.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-deployment.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/090_Deployment.pdf"
+    },
+    {
+      "index": 91,
+      "title": "Data Fetching",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-data-fetching.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-data-fetching.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/091_Data_Fetching.pdf"
+    },
+    {
+      "index": 92,
+      "title": "State Management",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-state-management.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-state-management.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/092_State_Management.pdf"
+    },
+    {
+      "index": 93,
+      "title": "Basket Management",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-basket-management.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-basket-management.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/093_Basket_Management.pdf"
+    },
+    {
+      "index": 94,
+      "title": "Server-Side Rendering (SSR)",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-rendering.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-rendering.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/094_Server-Side_Rendering_SSR.pdf"
+    },
+    {
+      "index": 95,
+      "title": "API Integration",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-api-integration.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-api-integration.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/095_API_Integration.pdf"
+    },
+    {
+      "index": 96,
+      "title": "Storage and Sessions",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-storage-sessions.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-storage-sessions.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/096_Storage_and_Sessions.pdf"
+    },
+    {
+      "index": 97,
+      "title": "Server Routes",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-server-routes.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-server-routes.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/097_Server_Routes.pdf"
+    },
+    {
+      "index": 98,
+      "title": "Routing",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-routing.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-routing.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/098_Routing.pdf"
+    },
+    {
+      "index": 99,
+      "title": "Styling",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-styling.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-styling.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/099_Styling.pdf"
+    },
+    {
+      "index": 100,
+      "title": "Component",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-components.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-components.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/100_Component.pdf"
+    },
+    {
+      "index": 101,
+      "title": "Static Assets",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-static-assets.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-static-assets.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/101_Static_Assets.pdf"
+    },
+    {
+      "index": 102,
+      "title": "SEO and Metadata",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-seo-metadata.html",
+      "dir_parts": [
+        "001_Storefront_Next",
+        "085_Migrate_from_PWA_Kit_to_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-pwa-seo-metadata.html",
+      "pdf": "001_Storefront_Next/085_Migrate_from_PWA_Kit_to_Storefront_Next/102_SEO_and_Metadata.pdf"
+    },
+    {
+      "index": 103,
+      "title": "CLI Reference",
+      "href": "/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-cli.html",
+      "dir_parts": [
+        "001_Storefront_Next"
+      ],
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/sfnext-cli.html",
+      "pdf": "001_Storefront_Next/103_CLI_Reference.pdf"
+    }
+  ],
+  "failures": []
+}

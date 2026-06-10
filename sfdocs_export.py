@@ -237,7 +237,8 @@ def main():
             user_agent=("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                         "AppleWebKit/537.36 (KHTML, like Gecko) "
                         "Chrome/125.0.0.0 Safari/537.36"),
-            viewport={"width": 1400, "height": 1000},
+            viewport={"width": 3456, "height": 2234},
+            device_scale_factor=2,
         )
         page = ctx.new_page()
         page.set_default_timeout(NAV_TIMEOUT_MS)
@@ -309,9 +310,10 @@ def main():
                 page.wait_for_timeout(800)  # late-rendered code blocks/images
                 page.add_style_tag(content=HIDE_CHROME_CSS)
                 page.emulate_media(media="print")
-                page.pdf(path=str(pdf_path), format="A4",
-                         margin={"top": "16mm", "bottom": "16mm",
-                                 "left": "12mm", "right": "12mm"},
+                page.pdf(path=str(pdf_path),
+                         width="16in", height="10in",
+                         margin={"top": "12mm", "bottom": "12mm",
+                                 "left": "10mm", "right": "10mm"},
                          print_background=True)
                 manifest.append({**item, "url": url, "pdf": str(rel_dir / fname)})
                 print(f"  ok   {rel_dir / fname}")
