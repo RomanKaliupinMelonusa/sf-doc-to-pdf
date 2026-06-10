@@ -121,6 +121,21 @@ async () => {
 }
 """
 
+# Extract the main article HTML (not the whole page) for Markdown conversion.
+EXTRACT_MAIN_JS = """
+() => {
+  const main = document.querySelector(
+    'main article, main [class*="content"], main, [role="main"], article'
+  );
+  if (!main) return { __error: 'main content not found' };
+  const h1 = document.querySelector('h1');
+  return {
+    title: h1 ? h1.textContent.trim() : document.title,
+    html: main.innerHTML,
+  };
+}
+"""
+
 
 def node_title(node):
     for key in ("text", "title", "label"):
@@ -214,6 +229,10 @@ def main():
                          "omit for the whole document")
     ap.add_argument("--tab", default=None,
                     help="Alias for --root (e.g. 'Storefront Next')")
+    ap.add_argument("--format", choices=["pdf", "md", "both"], default="pdf",
+                    help="Output format. 'md' extracts main content and "
+                         "converts to Markdown (pip install markdownify) — "
+                         "best for LLM consumption. Default: pdf")
     ap.add_argument("--out", default="./export")
     ap.add_argument("--inspect", action="store_true")
     ap.add_argument("--merge", action="store_true")
@@ -296,27 +315,60 @@ def main():
         out_root.mkdir(parents=True)
 
         manifest, failures = [], []
+        want_pdf = args.format in ("pdf", "both")
+        want_md = args.format in ("md", "both")
+        if want_md:
+            from markdownify import markdownify as html_to_md
+
         for item in pages:
             url = item["href"] if item["href"].startswith("http") \
                 else BASE + item["href"]
             rel_dir = Path(*item["dir_parts"]) if item["dir_parts"] else Path(".")
             (out_root / rel_dir).mkdir(parents=True, exist_ok=True)
-            fname = f"{item['index']:03d}_{sanitize(item['title'])}.pdf"
-            pdf_path = out_root / rel_dir / fname
+            stem = f"{item['index']:03d}_{sanitize(item['title'])}"
             try:
                 page.goto(url, wait_until="domcontentloaded")
                 page.wait_for_selector("main, [role='main'], article, h1",
                                        timeout=NAV_TIMEOUT_MS)
                 page.wait_for_timeout(800)  # late-rendered code blocks/images
-                page.add_style_tag(content=HIDE_CHROME_CSS)
-                page.emulate_media(media="print")
-                page.pdf(path=str(pdf_path),
-                         width="16in", height="10in",
-                         margin={"top": "12mm", "bottom": "12mm",
-                                 "left": "10mm", "right": "10mm"},
-                         print_background=True)
-                manifest.append({**item, "url": url, "pdf": str(rel_dir / fname)})
-                print(f"  ok   {rel_dir / fname}")
+
+                record = {**item, "url": url}
+
+                if want_md:
+                    data = page.evaluate(EXTRACT_MAIN_JS)
+                    if isinstance(data, dict) and "__error" in data:
+                        raise RuntimeError(data["__error"])
+                    md_body = html_to_md(
+                        data["html"], heading_style="ATX",
+                        code_language_callback=lambda el:
+                            (el.get("class") or [""])[0]
+                            .replace("language-", "") if el else "",
+                    )
+                    md_body = re.sub(r"\n{3,}", "\n\n", md_body).strip()
+                    crumb = " > ".join(d.split("_", 1)[-1].replace("_", " ")
+                                       for d in item["dir_parts"])
+                    front = (f"---\ntitle: \"{data['title']}\"\n"
+                             f"source: {url}\n"
+                             f"section: \"{crumb}\"\n"
+                             f"order: {item['index']}\n---\n\n")
+                    md_path = out_root / rel_dir / f"{stem}.md"
+                    md_path.write_text(front + md_body + "\n",
+                                       encoding="utf-8")
+                    record["md"] = str(rel_dir / f"{stem}.md")
+
+                if want_pdf:
+                    page.add_style_tag(content=HIDE_CHROME_CSS)
+                    page.emulate_media(media="print")
+                    pdf_path = out_root / rel_dir / f"{stem}.pdf"
+                    page.pdf(path=str(pdf_path),
+                             width="16in", height="10in",
+                             margin={"top": "12mm", "bottom": "12mm",
+                                     "left": "10mm", "right": "10mm"},
+                             print_background=True)
+                    record["pdf"] = str(rel_dir / f"{stem}.pdf")
+
+                manifest.append(record)
+                print(f"  ok   {rel_dir / stem}")
             except Exception as e:  # noqa: BLE001
                 failures.append({**item, "url": url, "error": str(e)})
                 print(f"  FAIL {url}: {e}")
@@ -324,15 +376,26 @@ def main():
 
         browser.close()
 
+    if want_md and manifest:
+        lines = [f"# Index: {args.doc}", ""]
+        for m in manifest:
+            if "md" in m:
+                depth = len(m["dir_parts"])
+                lines.append(f"{'  ' * depth}- [{m['title']}]({m['md']})")
+        (out_root / "index.md").write_text("\n".join(lines) + "\n",
+                                           encoding="utf-8")
+        print("Wrote index.md (navigation map for LLM agents)")
+
     (out_root / "manifest.json").write_text(
         json.dumps({"doc": args.doc, "pages": manifest,
                     "failures": failures}, indent=2))
 
-    if args.merge and manifest:
+    if args.merge and want_pdf and manifest:
         from pypdf import PdfWriter
         writer = PdfWriter()
         for m in manifest:
-            writer.append(str(out_root / m["pdf"]))
+            if "pdf" in m:
+                writer.append(str(out_root / m["pdf"]))
         with open(out_root / "combined.pdf", "wb") as f:
             writer.write(f)
         print("Merged PDF written to combined.pdf")
