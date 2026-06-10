@@ -212,12 +212,18 @@ def main():
     ap.add_argument("--root", default=None,
                     help="Menu item (title or href substring) to export; "
                          "omit for the whole document")
+    ap.add_argument("--tab", default=None,
+                    help="Alias for --root (e.g. 'Storefront Next')")
     ap.add_argument("--out", default="./export")
     ap.add_argument("--inspect", action="store_true")
     ap.add_argument("--merge", action="store_true")
     ap.add_argument("--headed", action="store_true",
                     help="Run a visible browser (helps against bot detection)")
     args = ap.parse_args()
+
+    # --tab is an alias for --root
+    if args.tab and not args.root:
+        args.root = args.tab
 
     category, _, deliverable = args.doc.partition(".")
     start_url = (args.start_url
