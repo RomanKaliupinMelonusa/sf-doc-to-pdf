@@ -6,8 +6,9 @@ Why v2: /docs/get_document/* returns 403 to plain HTTP clients (Akamai bot
 protection). So all requests now go through a real Chromium session:
 
   1. Open the docs site once (Akamai cookies get set).
-  2. Fetch the TOC JSON *from inside the page* via fetch() -> deterministic tree.
-     Fallback: scrape the fully-expanded sidebar nav (same tree, from the DOM).
+  2. Read the TOC from the `sidebar-content` JSON attribute on
+     `doc-content-layout` (contains the full hierarchical tree).
+     Fallback: traverse DX-TREE-ITEM shadow DOM components.
   3. For each page in the subtree: page.goto(url) -> hide site chrome -> page.pdf().
   4. Mirror the TOC hierarchy as folders, write manifest.json, zip it all.
      Optional: merge into one combined.pdf.
@@ -53,28 +54,28 @@ body { overflow: visible !important; }
 """
 
 # ---------------------------------------------------------------------------
-# TOC: in-browser JSON fetch (primary) + sidebar DOM scrape (fallback)
+# TOC extraction strategies
 # ---------------------------------------------------------------------------
 
-FETCH_TOC_JS = """
-async (docId) => {
-  const r = await fetch(`/docs/get_document/${docId}`, {
-    headers: { accept: 'application/json' },
-    credentials: 'include',
-  });
-  if (!r.ok) return { __error: r.status };
-  const text = await r.text();
-  if (!text || !text.trim()) return { __error: 'empty response body' };
+# Primary: read the sidebar-content JSON attribute from doc-content-layout.
+# This contains the full hierarchical tree with all children pre-loaded.
+FETCH_SIDEBAR_ATTR_JS = """
+() => {
+  const el = document.querySelector('doc-content-layout');
+  if (!el) return { __error: 'doc-content-layout element not found' };
+  const raw = el.getAttribute('sidebar-content');
+  if (!raw) return { __error: 'no sidebar-content attribute' };
   try {
-    return JSON.parse(text);
+    return { toc: JSON.parse(raw) };
   } catch (e) {
-    return { __error: `invalid JSON: ${e.message}` };
+    return { __error: 'invalid sidebar-content JSON: ' + e.message };
   }
 }
 """
 
-# Scrape sidebar by traversing DX-TREE-ITEM shadow DOM components.
-SCRAPE_SIDEBAR_JS = """
+# Fallback: traverse DX-TREE-ITEM shadow DOM components (only shows
+# expanded items, so the tree may be incomplete).
+SCRAPE_SHADOW_TREE_JS = """
 async () => {
   function extractTree(root, depth) {
     if (depth > 15) return [];
@@ -122,7 +123,7 @@ async () => {
 
 
 def node_title(node):
-    for key in ("text", "title", "label", "name"):
+    for key in ("text", "title", "label"):
         v = node.get(key)
         if isinstance(v, str) and v.strip():
             return v.strip()
@@ -131,7 +132,10 @@ def node_title(node):
 
 def node_href(node):
     a_attr = node.get("a_attr") or {}
-    for c in (a_attr.get("href"), node.get("href"), node.get("link"), node.get("url")):
+    link = node.get("link") or {}
+    for c in (a_attr.get("href"), node.get("href"),
+              link.get("href") if isinstance(link, dict) else link,
+              node.get("name"), node.get("url")):
         if isinstance(c, str) and c.strip():
             return c.strip()
     return None
@@ -143,15 +147,18 @@ def node_children(node):
 
 
 def toc_roots(toc_json):
-    for key in ("toc", "tocItems", "items", "children"):
-        v = toc_json.get(key)
-        if isinstance(v, list):
-            return v
-    for v in toc_json.values():
-        if isinstance(v, dict):
-            inner = toc_roots(v)
-            if inner:
-                return inner
+    if isinstance(toc_json, list):
+        return toc_json
+    if isinstance(toc_json, dict):
+        for key in ("toc", "tocItems", "items", "children"):
+            v = toc_json.get(key)
+            if isinstance(v, list):
+                return v
+        for v in toc_json.values():
+            if isinstance(v, dict):
+                inner = toc_roots(v)
+                if inner:
+                    return inner
     return []
 
 
@@ -200,8 +207,8 @@ def main():
     ap.add_argument("--doc", required=True,
                     help="Doc id, e.g. commerce.pwa-kit-managed-runtime")
     ap.add_argument("--start-url", default=None,
-                    help="Any page of that doc (used to bootstrap cookies). "
-                         "Defaults to /docs/{category}/{deliverable}")
+                    help="Any guide page of that doc (must render the sidebar). "
+                         "Defaults to /docs/{cat}/{deliverable}/guide/getting-started.html")
     ap.add_argument("--root", default=None,
                     help="Menu item (title or href substring) to export; "
                          "omit for the whole document")
@@ -213,7 +220,8 @@ def main():
     args = ap.parse_args()
 
     category, _, deliverable = args.doc.partition(".")
-    start_url = args.start_url or f"{BASE}/docs/{category}/{deliverable}/guide/getting-started"
+    start_url = (args.start_url
+                 or f"{BASE}/docs/{category}/{deliverable}/guide/getting-started.html")
 
     from playwright.sync_api import sync_playwright
 
@@ -230,16 +238,17 @@ def main():
 
         print(f"Bootstrapping session at {start_url} ...")
         page.goto(start_url, wait_until="networkidle")
-        page.wait_for_timeout(5000)  # let Akamai + SPA settle
+        page.wait_for_timeout(5000)  # let SPA fully render
 
-        print("Fetching TOC via in-page API call ...")
-        toc_json = page.evaluate(FETCH_TOC_JS, args.doc)
+        # --- Extract TOC ---
+        print("Extracting TOC from sidebar-content attribute ...")
+        toc_json = page.evaluate(FETCH_SIDEBAR_ATTR_JS)
         if isinstance(toc_json, dict) and "__error" in toc_json:
-            print(f"  get_document returned {toc_json['__error']}; "
-                  f"falling back to sidebar scrape ...")
-            toc_json = page.evaluate(SCRAPE_SIDEBAR_JS)
+            print(f"  sidebar-content: {toc_json['__error']}; "
+                  f"falling back to shadow DOM scrape ...")
+            toc_json = page.evaluate(SCRAPE_SHADOW_TREE_JS)
             if isinstance(toc_json, dict) and "__error" in toc_json:
-                print(f"  Sidebar fallback failed: {toc_json['__error']}")
+                print(f"  Shadow DOM fallback failed: {toc_json['__error']}")
                 browser.close()
                 sys.exit(1)
 
@@ -250,11 +259,6 @@ def main():
             browser.close()
             sys.exit(1)
 
-        if args.inspect:
-            print_tree(roots)
-            browser.close()
-            return
-
         if args.root:
             subtree = find_subtree(roots, args.root)
             if not subtree:
@@ -263,10 +267,16 @@ def main():
                 browser.close()
                 sys.exit(1)
             nodes = [subtree]
-            print(f"Exporting subtree: {node_title(subtree)}")
+            print(f"Selected subtree: {node_title(subtree)}")
         else:
             nodes = roots
-            print("Exporting entire document.")
+
+        if args.inspect:
+            print_tree(nodes)
+            browser.close()
+            return
+
+        print(f"Exporting {'subtree' if args.root else 'entire document'}.")
 
         pages, counter = [], [0]
         for n in nodes:
